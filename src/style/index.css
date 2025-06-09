@@ -57,7 +57,6 @@ nav {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
-	font-size: 2.5em;
 	font-style: normal;
 	font-variant: normal;
 	text-rendering: auto;
@@ -67,13 +66,6 @@ nav {
 .grid-packery {
 	max-width: 100%;
 	position: relative;
-}
-
-.grid-item {
-	width: 150px;
-	height: 150px;
-	margin: 10px;
-	float: left;
 }
 
 #typograph-anim-toggle[data-animation='play']>span::before {
@@ -203,4 +195,44 @@ input:not(:placeholder-shown)+label,
 textarea:not(:placeholder-shown)+label {
 	top: -10px !important;
 	color: #3b82f6 !important;
+}
+
+/* Extra large screens (xl: 1280px and up) */
+@media (min-width: 1280px) {
+  .quoted > p::before,
+  .quoted > p::after {
+    font-size: 2.75em;
+  }
+}
+
+/* Large screens (lg: 1024px–1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .quoted > p::before,
+  .quoted > p::after {
+    font-size: 2.65em;
+  }
+}
+
+/* Medium screens (md: 768px–1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .quoted > p::before,
+  .quoted > p::after {
+    font-size: 2.5em;
+  }
+}
+
+/* Small screens (sm: 640px–767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+  .quoted > p::before,
+  .quoted > p::after {
+    font-size: 2em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 639px) {
+	.quoted > p::before,
+	.quoted > p::after {
+		font-size: 1.05em;
+	}
 }
