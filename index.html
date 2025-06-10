@@ -13,8 +13,8 @@
     <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
     <script src="https://kit.fontawesome.com/aba48e7352.js" crossorigin="anonymous"></script>
     <!-- Local -->
-    <script src="./src/script/index.js"></script>
-    <link rel="stylesheet" href="./src/style/index.css">
+    <script src="./src/script/index.js?v=1.01"></script>
+    <link rel="stylesheet" href="./src/style/index.css?v=1.01">
   </head>
   <body class="overflow-x-hidden bg-gray-900 text-white custom-scroll loading">
     <header></header>
@@ -51,15 +51,15 @@
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Home</a>
-                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">It's a Me</a>
-                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">My Projects</a>
-                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact Me</a>
+                <a href="#homepage" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white nav-menu" aria-current="page">Home</a>
+                <a href="#about-me" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 nav-menu hover:text-white">It's a Me</a>
+                <a href="#my-projects" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 nav-menu hover:text-white">My Projects</a>
+                <a href="#contacts" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 nav-menu hover:text-white">Contact Me</a>
               </div>
             </div>
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <a class="transform scale-65 hover:scale-80 transition duration-300 ease-in-out px-3 py-2" href="https://github.com/yourusername" target="_blank">
+            <a class="transform scale-65 hover:scale-80 transition duration-300 ease-in-out px-3 py-2" href="https://github.com/briannur" target="_blank">
               <i class="fab fa-github fa-2x"></i>
             </a>
           </div>
@@ -69,10 +69,10 @@
       <div class="sm:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pt-2 pb-3">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Home</a>
-          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">It's a Me</a>
-          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">My Projects</a>
-          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact Me</a>
+          <a href="#homepage" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white nav-menu" aria-current="page">Home</a>
+          <a href="#about-me" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 nav-menu hover:text-white">It's a Me</a>
+          <a href="#my-projects" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 nav-menu hover:text-white">My Projects</a>
+          <a href="#contacts" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 nav-menu hover:text-white">Contact Me</a>
         </div>
       </div>
     </nav>
@@ -185,10 +185,10 @@
             <label class="text-2xl font-semibold rotate-90 origin-center sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl">PHP</label>
           </div>
           <div class="grid-item text-white w-48 h-24 flex items-center justify-center float-left m-[2px] sm:m-[7px] sm:p-2 md:m-[10px] md:p-4 hidden">
-            <label class="text-xl rotate-180 origin-center sm:text-2xl md:text-4xl lg:text-6xl xl:text-7xl">.Net</label>
+            <label class="text-xl rotate-270 origin-center sm:text-2xl md:text-4xl lg:text-6xl xl:text-7xl">.Net</label>
           </div>
           <div class="grid-item text-white w-48 h-24 flex items-center justify-center float-left m-[2px] sm:m-[7px] sm:p-2 md:m-[10px] md:p-4 hidden">
-            <label class="text-sm font-extrabold rotate-270 origin-center sm:text-base md:text-2xl lg:text-4xl xl:text-6xl">Framework</label>
+            <label class="text-sm font-extrabold rotate-180 origin-center sm:text-base md:text-2xl lg:text-4xl xl:text-6xl">Framework</label>
           </div>
           <div class="grid-item text-white w-48 h-24 flex items-center justify-center float-left m-[2px] sm:m-[7px] sm:p-2 md:m-[10px] md:p-4 hidden">
             <label class="text-base rotate-90 origin-center sm:text-xl md:text-3xl lg:text-5xl xl:text-6xl">Testing</label>
@@ -616,25 +616,25 @@
                 <div class="rounded-full bg-indigo-900 p-5">
                   <i class="fas fa-envelope fa-2x"></i>
                 </div>
-                <a href="#" class="absolute left-[100px] whitespace-nowrap font-medium text-blue-500 hover:underline">briannurhi@gmail</a>
+                <a href="mailto:briannurhi@gmail" class="absolute left-[100px] whitespace-nowrap font-medium text-blue-500 hover:underline">briannurhi@gmail</a>
               </div>
               <div class="relative flex items-center gap-2 md:transform md:skew-x-[25deg]">
                 <div class="rounded-full bg-indigo-900 p-5">
                   <i class="fas fa-phone fa-2x"></i>
                 </div>
-                <a href="#" class="absolute left-[100px] whitespace-nowrap font-medium text-blue-500 hover:underline">+62 851 8300 6908</a>
+                <a href="https://wa.me/6285183006908" target="_blank" rel="noopener noreferrer" class="absolute left-[100px] whitespace-nowrap font-medium text-blue-500 hover:underline">+62 851 8300 6908</a>
               </div>
               <div class="relative flex items-center gap-2 md:transform md:skew-x-[25deg]">
                 <div class="rounded-full bg-indigo-900 p-5">
                   <i class="fab fa-linkedin fa-2x"></i>
                 </div>
-                <a href="#" class="absolute left-[100px] whitespace-nowrap font-medium text-blue-500 hover:underline">@briannurh</a>
+                <a href="https://www.linkedin.com/in/briannur/" target="_blank" rel="noopener noreferrer" class="absolute left-[100px] whitespace-nowrap font-medium text-blue-500 hover:underline">@briannur</a>
               </div>
               <div class="relative flex items-center gap-2 md:transform md:skew-x-[25deg]">
                 <div class="rounded-full bg-indigo-900 p-5">
                   <i class="fab fa-github fa-2x"></i>
                 </div>
-                <a href="#" class="absolute left-[100px] whitespace-nowrap font-medium text-blue-500 hover:underline">@briannurhi</a>
+                <a href="https://github.com/briannur" target="_blank" rel="noopener noreferrer" class="absolute left-[100px] whitespace-nowrap font-medium text-blue-500 hover:underline">@briannur</a>
               </div>
             </div>
           </div>
@@ -671,7 +671,7 @@
     <footer class="w-screen my-4 px-8">
       <div class="bg-gray-800 rounded-lg shadow-sm">
         <div class="mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-          <span class="text-sm text-gray-400 sm:text-center">© 2025 <a href="https://flowbite.com/" class="hover:underline">Me Myself</a>. Last updated: 27 May 2025. No coffee. Just 5AM regrets and pure willpower. </span>
+          <span class="text-sm text-gray-400 sm:text-center">© 2025 <a href="https://flowbite.com/" class="hover:underline">Me Myself</a>. Last updated: 09 June 2025. No coffee. Just 5AM regrets and pure willpower. </span>
           <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-400 sm:mt-0">
             <li>
               <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
