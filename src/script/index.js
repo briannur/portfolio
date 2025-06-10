@@ -108,6 +108,7 @@ function rotateGridItem() {
         opacity: 0
     }, 500, 'swing', function() {
         $itemToHide.addClass('hidden').css('opacity', '');
+        pckry.layout();
     });
 
     const $itemToShow = $hiddenItems.eq(Math.floor(Math.random() * $hiddenItems.length));
@@ -187,6 +188,16 @@ $(document).ready(function() {
 
     mobileMenu.addClass('hidden');
 
+    $('.nav-menu').on('click', function (e) {
+      e.preventDefault();
+      const target = $($(this).attr('href'));
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 600);
+      }
+    });
+
     // Grid setup
     adjustGridItemSizes();
 
@@ -226,15 +237,31 @@ $(document).ready(function() {
 
     $(window).on('scroll resize', function() {
         const scrollTop = $(window).scrollTop();
-        const headerOffset = $('header').offset().top;
-        const headerHeight = $('header').outerHeight();
         const windowHeight = $(window).height();
 
+        // Existing logic
         if (!isPaused && scrollTop - windowHeight > 0) {
             stopRotation();
         } else {
             resumeRotation();
         }
+
+        // Nav section highlighting
+        $('main > section').each(function() {
+            const top = $(this).offset().top - 100;
+            const bottom = top + $(this).outerHeight();
+            const id = $(this).attr('id');
+
+            if (scrollTop >= top && scrollTop < bottom) {
+                $('.nav-menu').removeClass('bg-gray-900 text-white')
+                            .addClass('text-gray-300 hover:bg-gray-700 hover:text-white');
+
+                $(`.nav-menu[href="#${id}"]`)
+                    .addClass('bg-gray-900 text-white')
+                    .removeClass('text-gray-300 hover:bg-gray-700 hover:text-white');
+            }
+        });
+
     }).trigger('scroll');
 
     $('#typograph-anim-toggle').on('click', function() {
